@@ -44,4 +44,4 @@ agar kuch or => Nan*/
 //jab aap 1 then in bool = true 
 // if 0 then false 
 // if nishant then true 
-//if nothing then false 
+//if nothing then false     
