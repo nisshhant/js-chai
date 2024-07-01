@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Nishant is learning JavaScript</h1>
+    <button id = "run"> RUN </button>
+    <button id = "stop"> STOP </button>
+</body>
+<script>
+function buttonclick(){
+    console.log("hi my name is Nishant")
+    heading.innerHTML = "HAHAH YOU ARE HACKED"
+}
+function hack(){
+    console.log("i was clicked")
+    id = setTimeout(buttonclick,2000)}
+
+
+const heading = document.querySelector("h1")
+const button1 = document.querySelector('#run')
+button1.addEventListener("click", hack)
+
+document.querySelector("#stop").addEventListener('click',function(){
+    clearTimeout(id)
+    console.log("rok dunga sab")
+})
+</script>
+</html>

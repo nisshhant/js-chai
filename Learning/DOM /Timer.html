@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a TIMER !!</h1>
+    <label id="timer">0</label>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+</body>
+<script>
+    const timer = document.querySelector("#timer");
+    let i = 0;
+    let timerid; // Declare the timer ID in a scope accessible to both functions
+
+    document.querySelector("#start").addEventListener('click', () => {
+        // Immediately update the timer and increment i
+        timer.innerHTML = i;
+        i = i + 1;
+        
+        // Start the interval
+        timerid = setInterval(() => {
+            timer.innerHTML = i;
+            i = i + 1;
+        }, 1000);
+    });
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(timerid);
+    });
+
+    document.querySelector('#reset').addEventListener('click', () => {
+        clearInterval(timerid); // Ensure the interval is cleared when resetting
+        timer.innerHTML = "0";
+        i = 0;
+    });
+</script>
+</html>

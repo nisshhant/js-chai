@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Nishant is learning JavaScript</h1>
+    <button id = "run"> RUN </button>
+    <button id = "stop"> STOP </button>
+</body>
+<script>
+
+function getRandomColor() {
+        return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    }
+
+const body = document.querySelector("body")
+function bgchange(){
+    id = setInterval(()=>{
+        body.style.backgroundColor = getRandomColor()
+    },1000)
+}
+
+document.querySelector("#run").addEventListener('click' , bgchange)
+document.querySelector("#stop").addEventListener('click', ()=>{
+    clearInterval(id)
+})
+</script>
+</html>
